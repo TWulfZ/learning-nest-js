@@ -1,4 +1,10 @@
-import { HttpException, HttpStatus, Injectable, Logger, NestMiddleware } from '@nestjs/common';
+import {
+  HttpException,
+  HttpStatus,
+  Injectable,
+  Logger,
+  NestMiddleware,
+} from '@nestjs/common';
 import { Request, Response } from 'express';
 
 @Injectable()
