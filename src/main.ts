@@ -8,14 +8,15 @@ async function bootstrap() {
   //app.setGlobalPrefix('api');
   const config = new DocumentBuilder()
     .setTitle('TWulfZ first NestJS API')
-    .setDescription(
-      'The TWulfZ API is designed based on the Fazt tutorial for learn NestJS',
-    )
+    .setDescription('The TWulfZ API is designed based on the Fazt tutorial for learn NestJS')
     .setVersion('1.0')
     .addTag('wulf')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
+
+  // Setup Origin CORS
+  app.enableCors(/*{ origin: 'about:blank' }*/);
   app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
   await app.listen(3000);
 }
