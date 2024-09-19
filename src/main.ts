@@ -18,6 +18,6 @@ async function bootstrap() {
   // Setup Origin CORS
   app.enableCors(/*{ origin: 'about:blank' }*/);
   app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
-  await app.listen(3000);
+  await app.listen(process.env.PORT || 3000);
 }
 bootstrap();
