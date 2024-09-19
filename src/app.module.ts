@@ -5,9 +5,17 @@ import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { HelloController } from './hello/hello.controller';
 import { PaymentsModule } from './payments/payments.module';
+import { SwaggerModule } from '@nestjs/swagger';
 
 @Module({
-  imports: [TasksModule, ProjectsModule, AuthModule, UsersModule, PaymentsModule],
+  imports: [
+    TasksModule,
+    ProjectsModule,
+    AuthModule,
+    UsersModule,
+    PaymentsModule,
+    SwaggerModule,
+  ],
   controllers: [HelloController],
 })
 export class AppModule {}
