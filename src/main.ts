@@ -7,7 +7,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   //app.setGlobalPrefix('api');
   const config = new DocumentBuilder()
-    .setTitle('TWulfZ first NestJS API')
+    .setTitle('Digi was here')
     .setDescription('The TWulfZ API is designed based on the Fazt tutorial for learn NestJS')
     .setVersion('1.0')
     .addTag('wulf')
